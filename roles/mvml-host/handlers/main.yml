@@ -1,0 +1,6 @@
+---
+- name: Start mvml-host
+  command: /sbin/initctl start mvml-host
+
+- name: Restart mvml-host
+  command: /sbin/initctl restart mvml-host
