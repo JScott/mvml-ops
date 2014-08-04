@@ -3,3 +3,4 @@
   apt: state=latest pkg={{ item }}
   with_items:
     - nodejs
+    - npm
