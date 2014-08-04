@@ -14,9 +14,9 @@ sudo apt-get update
 sudo apt-get install ansible
 ```
 
-Then run:
+Then set up your hosts file and run:
 
 ```
 git clone git@github.com:JScott/mvml-ops.git
-ansible-playbook server.yml -i hosts -K
+ansible-playbook server.yml -i hosts --ask-pass --ask-sudo-pass
 ```

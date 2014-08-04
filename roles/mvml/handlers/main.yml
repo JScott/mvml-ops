@@ -1,0 +1,6 @@
+---
+- name: Start mvml
+  command: /sbin/initctl start mvml
+
+- name: Restart mvml
+  command: /sbin/initctl restart mvml
