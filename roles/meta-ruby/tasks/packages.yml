@@ -1,0 +1,11 @@
+---
+- name: Add PPA | brightbox/ruby-ng
+  apt_repository:
+    repo: 'ppa:brightbox/ruby-ng'
+
+- name: Install Packages | apt
+  apt:
+    pkg: "{{ item }}"
+    state: latest
+  with_items:
+    - ruby2.1
