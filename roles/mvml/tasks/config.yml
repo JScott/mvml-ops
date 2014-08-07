@@ -9,3 +9,9 @@
   notify:
     - Start mvml
     - Restart mvml
+
+- name: Modify Config | mvml | content server
+  lineinfile:
+    dest: /opt/mvml/parse/config.yaml
+    regexp: "^content_server:"
+    line: "content_server: content.mvml.net:6865"
