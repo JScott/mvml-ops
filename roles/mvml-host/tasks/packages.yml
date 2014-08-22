@@ -6,6 +6,8 @@
     owner: root
     group: root
     mode: 0644
+  notify:
+    - Start mvml-host
 
 - name: Pull Repo | mvml-host
   git:
@@ -15,4 +17,4 @@
     accept_hostkey: yes
 
 - name: Install Packages | from packages.json
-  command: "chdir=/opt/mvml/host /usr/bin/npm install"
+  npm: path=/opt/mvml/host state=latest

@@ -7,7 +7,6 @@
     group: root
     mode: 0644
   notify:
-    - Start mvml
     - Restart mvml
 
 - name: Modify Config | mvml | content server
@@ -15,3 +14,13 @@
     dest: /opt/mvml/parse/config.yaml
     regexp: "^content_server:"
     line: "content_server: content.mvml.net:6865"
+  notify:
+    - Restart mvml
+
+- name: Replace String | mvml | api server
+  replace:
+    dest: /opt/mvml/parse/public/js/mvml-api.js
+    regexp: "direct.dev.mvml.net"
+    replace: "direct.mvml.net"
+  notify:
+    - Restart mvml
