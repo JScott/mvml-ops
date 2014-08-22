@@ -12,7 +12,7 @@
 - name: Replace String | mvml-host | content server
   replace:
     dest: /opt/mvml/host/views/getting-started.html
-    regexp: "content.dev.mvml.net"
-    replace: "content.mvml.net"
+    regexp: "dev.mvml.net"
+    replace: "mvml.net"
   notify:
     - Restart mvml-host
