@@ -1,6 +1,8 @@
 ---
-- name: Start mvml-host
-  command: /sbin/initctl start mvml-host
+- name: Restart monit
+  command: /usr/sbin/service monit restart
 
 - name: Restart mvml-host
-  command: /sbin/initctl restart mvml-host
+  monit:
+    name: mvml-host
+    state: restarted

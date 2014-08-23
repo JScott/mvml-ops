@@ -1,0 +1,4 @@
+check process mvml-host matching mvml/host/server
+  start program "/usr/bin/nodejs /opt/mvml/host/server.js 80 >> /var/log/mvml-host.log 2>&1"
+  stop program "/usr/bin/pkill -f mvml/host/server"
+  if 5 restarts within 5 cycles then timeout

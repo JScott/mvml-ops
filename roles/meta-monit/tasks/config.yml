@@ -1,0 +1,8 @@
+---
+- name: Upload Config | monit
+  template:
+    src: etc/monit/monitrc
+    dest: /etc/monit/monitrc
+    owner: root
+    group: root
+    mode: 0600

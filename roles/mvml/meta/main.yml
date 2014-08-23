@@ -1,3 +1,4 @@
 ---
 dependencies:
 - { role: meta-ruby }
+- { role: meta-monit }

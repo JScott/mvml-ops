@@ -1,13 +1,14 @@
 ---
 - name: Upload Config | upstart | mvml
   template:
-    src: etc/init/mvml.conf
-    dest: /etc/init/mvml.conf
+    src: etc/monit/conf.d/mvml
+    dest: /etc/monit/conf.d/mvml
     owner: root
     group: root
     mode: 0644
   notify:
     - Restart mvml
+    - Restart monit
 
 - name: Modify Config | mvml | content server
   lineinfile:

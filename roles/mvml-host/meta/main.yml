@@ -2,3 +2,4 @@
 dependencies:
 - { role: meta-nodejs }
 - { role: meta-couchdb }
+- { role: meta-monit }

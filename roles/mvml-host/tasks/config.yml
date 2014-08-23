@@ -1,13 +1,14 @@
 ---
-- name: Upload Config | upstart | mvml-host
+- name: Upload Config | monit | mvml-host
   template:
-    src: etc/init/mvml-host.conf
-    dest: /etc/init/mvml-host.conf
+    src: etc/monit/conf.d/mvml-host
+    dest: /etc/monit/conf.d/mvml-host
     owner: root
     group: root
     mode: 0644
   notify:
     - Restart mvml-host
+    - Restart monit
 
 - name: Replace String | mvml-host | content server
   replace:
